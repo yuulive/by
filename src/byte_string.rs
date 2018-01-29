@@ -282,14 +282,21 @@ impl ByteString {
 impl<'a> From<&'a [u8]> for ByteString {
     #[inline]
     fn from(src: &'a [u8]) -> Self {
-        ByteStr::from_slice(src).to_byte_string()
+        ByteString::from_slice(src)
+    }
+}
+
+impl<'a> From<&'a ByteStr> for ByteString {
+    #[inline]
+    fn from(src: &'a ByteStr) -> Self {
+        src.to_byte_string()
     }
 }
 
 impl<'a> From<&'a str> for ByteString {
     #[inline]
     fn from(src: &'a str) -> Self {
-        ByteString::from(src.as_bytes())
+        ByteString::from_slice(src.as_bytes())
     }
 }
 
@@ -311,6 +318,20 @@ impl From<Box<ByteStr>> for ByteString {
     #[inline]
     fn from(src: Box<ByteStr>) -> Self {
         src.into_byte_string()
+    }
+}
+
+impl From<Box<str>> for ByteString {
+    #[inline]
+    fn from(src: Box<str>) -> Self {
+        ByteString::from(Box::<[u8]>::from(src))
+    }
+}
+
+impl From<String> for ByteString {
+    #[inline]
+    fn from(src: String) -> Self {
+        ByteString::from(src.into_bytes())
     }
 }
 
