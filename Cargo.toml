@@ -1,0 +1,10 @@
+[package]
+name = "byte_str"
+version = "0.1.0"
+authors = ["Eduardo Sánchez Muñoz <esm@eduardosm.net>"]
+license = "MIT/Apache-2.0"
+
+[features]
+no_std = []
+
+[dependencies]
