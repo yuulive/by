@@ -3,7 +3,7 @@ name = "by"
 version = "0.1.2"
 authors = ["Eduardo Sánchez Muñoz <esm@eduardosm.net>"]
 description = "Rust Wrapper types around [u8] and Vec<u8> with similar functionality as str and String"
-repository = "https://github.com/eduardosm/rust-byte_str"
+repository = "https://github.com/yuulive/by"
 license = "MIT/Apache-2.0"
 
 [features]
