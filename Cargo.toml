@@ -1,8 +1,8 @@
 [package]
-name = "byte_str"
+name = "by"
 version = "0.1.2"
 authors = ["Eduardo Sánchez Muñoz <esm@eduardosm.net>"]
-description = "Wrapper types around [u8] and Vec<u8> with similar functionality as str and String"
+description = "Rust Wrapper types around [u8] and Vec<u8> with similar functionality as str and String"
 repository = "https://github.com/eduardosm/rust-byte_str"
 license = "MIT/Apache-2.0"
 
